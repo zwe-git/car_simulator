@@ -1,8 +1,6 @@
-import pytest
 from constants import Direction
 from models import CarSpec
 from services import Simulation
-
 
 def test_single_car_simulation():
     # Scenario 1 - Running simulation with a single car

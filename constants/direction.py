@@ -1,6 +1,5 @@
 from enum import Enum
 
-
 class Direction(Enum):
     # Four cardinal direction to support left/right rotation logic
     N = 'N'

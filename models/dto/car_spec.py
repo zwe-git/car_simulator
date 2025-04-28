@@ -1,7 +1,5 @@
 from dataclasses import dataclass
-
 from constants import Direction
-
 
 @dataclass
 class CarSpec:
