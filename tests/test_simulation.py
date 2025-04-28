@@ -5,6 +5,7 @@ from services import Simulation
 
 
 def test_single_car_simulation():
+    # Scenario 1 - Running simulation with a single car
     sim = Simulation(10, 10)
     sim.add_car(CarSpec(name="A", x=1, y=2, direction=Direction.N, commands="FFRFFFFRRL"))
     results = sim.run()
@@ -16,6 +17,7 @@ def test_single_car_simulation():
 
 
 def test_multiple_car_collision():
+    # Scenario 2 - Running simulation with a multiple cars
     sim = Simulation(10, 10)
     sim.add_car(CarSpec(name="A", x=1, y=2, direction=Direction.N, commands="FFRFFFFRRL"))
     sim.add_car(CarSpec(name="B", x=7, y=8, direction=Direction.W, commands="FFLFFFFFFF"))
