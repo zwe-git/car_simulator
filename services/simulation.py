@@ -9,6 +9,8 @@ class Simulation:
         self.cars = []
 
     def add_car(self, car_spec: CarSpec):
+        if not self.is_inside(car_spec.x, car_spec.y):
+            raise ValueError(f"Car {car_spec.name} starts outside the field at ({car_spec.x}, {car_spec.y})")
         self.cars.append(Car(car_spec))
 
     def is_inside(self, x, y):
@@ -38,10 +40,6 @@ class Simulation:
                 elif command == 'R':
                     car.rotate_right()
                 elif command == 'F':
-                    nx, ny = car.move_forward()
-                    next_positions[car.name] = self.decide_next_position(car, nx, ny)
-                elif command in ('N', 'E', 'S', 'W'):
-                    car.move_to(Direction(command))
                     nx, ny = car.move_forward()
                     next_positions[car.name] = self.decide_next_position(car, nx, ny)
                 else:
