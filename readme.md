@@ -40,6 +40,12 @@ python -m cli
 pytest -v
 ```
 
+- Running Coverage
+
+```bash
+pytest --cov
+```
+
 ## Known Limitations
 
 - **Input Validation**:  
@@ -64,5 +70,8 @@ pytest -v
   - Command sequence (only 'F', 'L', 'R', 'N', 'S', 'E', 'W')
   - Handle unexpected user inputs gracefully with friendly error messages.
 
-- **Advanced Movement Behavior**:  
-  Support variable speeds, scheduled moves, or asynchronous simulation steps.
+- **Advanced Movement Behavior**:
+  - **Add Support for N/S/E/W Direction Commands:**  
+  Allow cars to rotate directly to absolute directions (`N`, `S`, `E`, `W`).  
+  This was excluded to align with the assessment scope but can enhance control precision.
+  - Support variable speeds, scheduled moves, or asynchronous simulation steps.
